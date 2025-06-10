@@ -53,45 +53,44 @@ router.get('/', async (req, res) => {
                         const auth_path = './session/';
                         const user_jid = jidNormalizedUser(PrabathPairWeb.user.id);
 
-                      function randomMegaId(length = 6, numberLength = 4) {
-                      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                      let result = '';
-                      for (let i = 0; i < length; i++) {
-                      result += characters.charAt(Math.floor(Math.random() * characters.length));
-                        }
-                       const number = Math.floor(Math.random() * Math.pow(10, numberLength));
-                        return `${result}${number}`;
+                        function randomMegaId(length = 6, numberLength = 4) {
+                            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                            let result = '';
+                            for (let i = 0; i < length; i++) {
+                                result += characters.charAt(Math.floor(Math.random() * characters.length));
+                            }
+                            const number = Math.floor(Math.random() * Math.pow(10, numberLength));
+                            return `${result}${number}`;
                         }
 
                         const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
 
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
 
-                        const sid = "STARK-ALI" + string_session;
+                        const sid = "Zaynix-MD=" + string_session;
 
                         const dt = await PrabathPairWeb.sendMessage(user_jid, {
                             text: sid
                         });
 
-                                   await PrabathPairWeb.sendMessage(user_jid, {
-                            text: `> *CONNECTED SUCCESSFULLY ✅*
-╭────「 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 」────◆
-│ *ʏᴏᴜᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ғɪʀsᴛ sᴛᴇᴘ*
-│ *ᴛᴏ ᴅᴇᴘʟᴏʏ ᴀ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ.𓆈*
-│─────────────────────
-│ *∘ ᴄʜᴀɴɴᴇʟ:*
-│ *∘ https://tinyurl.com/26qonxcy*
-│─────────────────────
-│ *∘ ᴏᴡɴᴇʀ:*
-│ *∘ https://tinyurl.com/24ac6the*
-│─────────────────────
-│  *∘ ʀᴇᴘᴏ:*
-│  *∘  https://tinyurl.com/27mtrkul*
-│─────────────────────
-│ *∘ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ ᴍᴀᴅᴇ ᴡɪᴛʜ ʟᴏᴠᴇ*
-╰─────────────────────`
+                        await PrabathPairWeb.sendMessage(user_jid, {
+                            text: `*𝐙𝐚𝐲𝐧𝐢𝐱-𝐌𝐃 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋�{Y!*
+
+╔══════════════════════╗
+║  ⚡ *SAVE YOUR SESSION ID* ⚡  
+║  ✅ *CHECK ABOVE MESSAGE*  ✅
+╚══════════════════════╝
+
+*📢 OFFICIAL CHANNEL:*
+➤ https://whatsapp.com/channel/0029Vb0Tq5eKbYMSSePQtI34
+
+*👨‍💻 NEED HELP?*
+➤ wa.me/919341378016
+
+*⚠️ IMPORTANT:*
+🔒 *NEVER SHARE YOUR SESSION ID WITH ANYONE* 🔒
+💯 *ZAYNIX-MD - THE BEST MD BOT* 💯`
                         });
-                                    
 
                     } catch (e) {
                         exec('pm2 restart prabath');
@@ -122,6 +121,5 @@ process.on('uncaughtException', function (err) {
     console.log('Caught exception: ' + err);
     exec('pm2 restart prabath');
 });
-
 
 module.exports = router;
