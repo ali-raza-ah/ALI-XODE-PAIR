@@ -67,29 +67,29 @@ router.get('/', async (req, res) => {
 
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
 
-                        const sid = "Zaynix-MD=" + string_session;
+                        const sid = "STARK-ALI" + string_session;
 
                         const dt = await PrabathPairWeb.sendMessage(user_jid, {
                             text: sid
                         });
 
                         await PrabathPairWeb.sendMessage(user_jid, {
-                            text: `*𝐙𝐚𝐲𝐧𝐢𝐱-𝐌𝐃 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄𝐃 𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋�{Y!*
-
-╔══════════════════════╗
-║  ⚡ *SAVE YOUR SESSION ID* ⚡  
-║  ✅ *CHECK ABOVE MESSAGE*  ✅
-╚══════════════════════╝
-
-*📢 OFFICIAL CHANNEL:*
-➤ https://whatsapp.com/channel/0029Vb0Tq5eKbYMSSePQtI34
-
-*👨‍💻 NEED HELP?*
-➤ wa.me/919341378016
-
-*⚠️ IMPORTANT:*
-🔒 *NEVER SHARE YOUR SESSION ID WITH ANYONE* 🔒
-💯 *ZAYNIX-MD - THE BEST MD BOT* 💯`
+                            text: `> *CONNECTED SUCCESSFULLY ✅*
+╭────「 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 」────◆
+│ *ʏᴏᴜᴠᴇ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ғɪʀsᴛ sᴛᴇᴘ*
+│ *ᴛᴏ ᴅᴇᴘʟᴏʏ ᴀ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ.𓆈*
+│─────────────────────
+│ *∘ ᴄʜᴀɴɴᴇʟ:*
+│ *∘ https://tinyurl.com/26qonxcy*
+│─────────────────────
+│ *∘ ᴏᴡɴᴇʀ:*
+│ *∘ https://tinyurl.com/24ac6the*
+│─────────────────────
+│  *∘ ʀᴇᴘᴏ:*
+│  *∘  https://tinyurl.com/27mtrkul*
+│─────────────────────
+│ *∘ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ ᴍᴀᴅᴇ ᴡɪᴛʜ ʟᴏᴠᴇ*
+╰─────────────────────`
                         });
 
                     } catch (e) {
